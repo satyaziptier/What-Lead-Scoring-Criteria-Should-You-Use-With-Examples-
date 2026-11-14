@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ===== SWAP 1: head meta (replace the template's matching tags) ===== -->
+<title>What Lead Scoring Criteria Should You Use? (With Examples) - ZipTier Blog</title>
+<meta name="description" content="Lead scoring criteria and examples: score fit and intent from 0 to 100, set High, Medium and Low cutoffs, and see how ZipTier scores a lead in chat.">
+<meta name="keywords" content="lead scoring criteria examples, lead scoring examples, lead scoring best practices, lead scoring software, lead scoring tools">
+<link rel="canonical" href="https://www.ziptier.ai/blogs/lead-scoring-criteria-examples">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What Lead Scoring Criteria Should You Use? (With Examples) - ZipTier Blog">
+<meta property="og:description" content="Lead scoring criteria and examples: score fit and intent from 0 to 100, set High, Medium and Low cutoffs, and see how ZipTier scores a lead in chat.">
+<meta property="og:url" content="https://www.ziptier.ai/blogs/lead-scoring-criteria-examples">
+<meta property="article:published_time" content="2026-11-13">
+<meta property="article:modified_time" content="2026-11-13">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Lead Scoring Criteria Should You Use? (With Examples) - ZipTier Blog">
+<meta name="twitter:description" content="Lead scoring criteria and examples: score fit and intent from 0 to 100, set High, Medium and Low cutoffs, and see how ZipTier scores a lead in chat.">
+<!-- ===== SWAP 2: three JSON-LD blocks (replace the template's three) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What Lead Scoring Criteria Should You Use? (With Examples)",
+  "description": "Lead scoring criteria and examples: score fit and intent from 0 to 100, set High, Medium and Low cutoffs, and see how ZipTier scores a lead in chat.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ziptier.ai/blogs/lead-scoring-criteria-examples"
+  },
+  "url": "https://www.ziptier.ai/blogs/lead-scoring-criteria-examples",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "keywords": "lead scoring criteria examples, lead scoring examples, lead scoring best practices, lead scoring software, lead scoring tools",
+  "wordCount": 3609,
+  "author": {
+    "@type": "Person",
+    "name": "Vijay Satya Prakash",
+    "jobTitle": "TODO: confirm job title from template",
+    "url": "https://www.linkedin.com/in/vijay-sathya-prakash-057533248/",
+    "sameAs": [
+      "https://www.linkedin.com/in/vijay-sathya-prakash-057533248/"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ZipTier",
+    "url": "https://www.ziptier.ai"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ziptier.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.ziptier.ai/blogs"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "What Lead Scoring Criteria Should You Use? (With Examples)",
+      "item": "https://www.ziptier.ai/blogs/lead-scoring-criteria-examples"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I score inbound leads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Give each answer a lead shares 0 to 100 points, and average them into a fit score and an intent score. Decide how much each counts, so the two add up to 100%. Then compare the result to cutoffs, such as 70 for High and 40 for Medium."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between lead scoring and lead grading?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A grade usually shows fit, like job title and company size, as a letter. A score usually shows interest as a number. HubSpot's combined score uses both: A to C for fit and 1 to 3 for engagement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between lead scoring and lead qualification?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lead qualification decides if a lead is worth chasing at all. Lead scoring puts those leads in order, so sales knows who to call first. Many teams qualify with a checklist like BANT, then use a score to set the order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What score should trigger a handoff to sales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There's no single right number, because it depends on how you give points. Adobe's Marketo example passes leads to sales at 50 points and suggests 100 if you're just starting. On ZipTier's 0 to 100 scale, the default High cutoff is 70."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should a pricing question raise a lead's score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not on its own, because students, researchers and competitors ask about price too. Count it when it comes with a deadline, a budget or a real business problem."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is AI lead scoring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can be very accurate when it learns from a company's own history. A 2025 study in Frontiers in Artificial Intelligence found one model was right 98.4% of the time on 16,600 records from one B2B software company. Your results will depend on how much data you have and how clean it is."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI chatbot platforms can capture, score and route high-intent leads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Several platforms qualify or score website leads, but they score different things. Some grade each person from what they say in the chat, while others score whole companies from website visits. Compare them on what feeds the score, whether you can see the math and where the result goes."
+      }
+    }
+  ]
+}
+</script>
+<style>/* PREVIEW-ONLY stand-in styles. Delete when pasting into the real template. */
+*{box-sizing:border-box}body{margin:0;font:17px/1.65 system-ui,sans-serif;color:#1f1a2e;background:#fff}
+.zt-article{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+.zt-crumb{font-size:14px;color:#6b6380}.zt-crumb a{color:#6d28d9}
+.zt-eyebrow{display:flex;flex-wrap:wrap;gap:12px;align-items:center;font-size:14px;color:#6b6380;margin:16px 0}
+.zt-summarize{border:1px solid #c4b5fd;background:#f5f3ff;color:#5b21b6;border-radius:999px;padding:4px 12px;font:inherit}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.2;margin:8px 0 20px}h2{font-size:26px;margin:40px 0 12px}h3{font-size:20px;margin:28px 0 8px}
+.zt-lead{border-left:4px solid #7c3aed;background:#f5f3ff;padding:12px 18px;border-radius:6px}
+.zt-byline{display:flex;gap:10px;align-items:center;font-size:14px;color:#6b6380;margin:16px 0}
+.zt-avatar{width:32px;height:32px;border-radius:50%;background:#7c3aed;color:#fff;display:grid;place-items:center;font-weight:600}
+.zt-v{margin:24px 0}.zt-card{border:1px solid #e4defa;border-radius:12px;padding:16px 20px;background:#fff}
+.zt-card__head{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#6d28d9;margin-bottom:6px}
+.zt-stat{font-size:40px;font-weight:700;margin:0;color:#5b21b6}.zt-formula{font-weight:600;overflow-wrap:anywhere}
+.zt-cap{font-size:14px;color:#6b6380;margin-top:8px}
+.blog-table{margin:20px 0}.blog-table__hint{font-size:13px;color:#6b6380;margin:0 0 6px}
+.blog-table__scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.blog-table table{border-collapse:collapse;min-width:640px;width:100%;font-size:15px}
+.blog-table th,.blog-table td{border:1px solid #e4defa;padding:8px 10px;text-align:left;vertical-align:top}
+.blog-table th{background:#f5f3ff}
+details{border:1px solid #e4defa;border-radius:8px;padding:10px 14px;margin:10px 0}summary{font-weight:600;cursor:pointer}
+.mb-2{margin-bottom:.5rem}.text-violet-700{color:#6d28d9}.underline{text-decoration:underline}a{overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<!-- ===== SWAP 3: article element (replace the template's <article>) ===== -->
+<article class="zt-article">
+  <style>
+    /* ZipTier lead scoring tools: scoped to .zt-tool so nothing leaks into the template */
+    .zt-tool{--t-ink:#1f1a2e;--t-muted:#6b6380;--t-line:#e4defa;--t-soft:#f5f3ff;--t-accent:#6d28d9;--t-high:#0f7b52;--t-high-bg:#e3f5ec;--t-mid:#a15c00;--t-mid-bg:#fdf0dc;--t-low:#6b6380;--t-low-bg:#efeef3;--t-bad:#b4233a;--t-bad-bg:#fbe7ea}
+    .zt-tool .zt-card{display:grid;gap:14px}
+    .zt-tool__row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+    .zt-tool__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+    @media (max-width:640px){.zt-tool__grid{grid-template-columns:minmax(0,1fr)}}
+    .zt-tool__controls{display:grid;gap:10px;min-width:0}
+    .zt-tool label{display:grid;gap:4px;font-size:14px;font-weight:500;color:var(--t-ink)}
+    .zt-tool select,.zt-tool input[type=number]{font:inherit;font-size:14px;color:var(--t-ink);background:#fff;border:1px solid var(--t-line);border-radius:8px;padding:7px 9px;width:100%}
+    .zt-tool input[type=range]{width:100%;accent-color:var(--t-accent)}
+    .zt-tool .zt-tool__check{display:flex;gap:8px;align-items:center}
+    .zt-tool .zt-tool__check input{accent-color:var(--t-accent);width:16px;height:16px}
+    .zt-tool button{font:inherit;font-size:13px;font-weight:500;border:1px solid var(--t-line);background:#fff;color:var(--t-ink);border-radius:999px;padding:5px 12px;cursor:pointer}
+    .zt-tool button:hover{border-color:var(--t-accent)}
+    .zt-tool button[aria-pressed="true"]{background:var(--t-soft);border-color:var(--t-accent);color:var(--t-accent)}
+    .zt-tool :focus-visible{outline:2px solid var(--t-accent);outline-offset:2px}
+    .zt-tool__out{background:var(--t-soft);border-radius:10px;padding:14px;display:grid;gap:10px;align-content:start;align-self:start;min-width:0}
+    .zt-tool__score{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+    .zt-tool__num{font-size:40px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;color:var(--t-ink)}
+    .zt-tool__pill{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+    .zt-tool__pill.is-High{background:var(--t-high-bg);color:var(--t-high)}
+    .zt-tool__pill.is-Medium{background:var(--t-mid-bg);color:var(--t-mid)}
+    .zt-tool__pill.is-Low{background:var(--t-low-bg);color:var(--t-low)}
+    .zt-tool__meter{position:relative;height:12px;border-radius:999px;background:#fff;border:1px solid var(--t-line)}
+    .zt-tool__fill{position:absolute;inset:0 auto 0 0;border-radius:999px;background:var(--t-accent);transition:width .25s}
+    .zt-tool__tick{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--t-ink);opacity:.5}
+    .zt-tool__scale{position:relative;height:16px;font-size:11px;color:var(--t-muted);font-variant-numeric:tabular-nums}.zt-tool__scale span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+    .zt-tool pre{margin:0;padding:10px;background:#fff;border:1px solid var(--t-line);border-radius:8px;font-size:12.5px;line-height:1.7;overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+    .zt-tool__note{font-size:13px;color:var(--t-muted);margin:0}
+    .zt-tool__flag{font-size:13px;margin:0;padding:8px 10px;border-radius:8px;background:var(--t-mid-bg);color:var(--t-mid)}
+    .zt-tool__list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+    .zt-tool__item{border:1px solid var(--t-line);border-radius:10px;padding:10px 12px;display:grid;gap:8px;background:#fff}
+    .zt-tool__item q{font-weight:500}
+    .zt-tool__ans{font-size:13px;margin:0;padding:7px 10px;border-radius:8px}
+    .zt-tool__ans.is-right{background:var(--t-high-bg);color:var(--t-high)}
+    .zt-tool__ans.is-wrong{background:var(--t-bad-bg);color:var(--t-bad)}
+    .zt-tool__chart{overflow-x:auto}
+    .zt-tool__chart svg{display:block;width:100%;height:auto;min-width:300px}
+    .zt-tool__chart text{fill:var(--t-muted);font-size:11px}
+    @media (prefers-reduced-motion:reduce){.zt-tool__fill{transition:none}}
+    /* Infographics: scoped to .zt-ig */
+    .zt-ig{--i-ink:#1f1a2e;--i-muted:#6b6380;--i-line:#e4defa;--i-soft:#f5f3ff;--i-accent:#6d28d9;--i-accent-2:#a78bfa;--i-high:#0f7b52;--i-high-bg:#e3f5ec;--i-mid:#a15c00;--i-mid-bg:#fdf0dc;--i-low-bg:#efeef3}
+    .zt-ig .zt-card{display:grid;gap:14px}
+    .zt-ig__stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    @media (max-width:560px){.zt-ig__stats{grid-template-columns:minmax(0,1fr)}}
+    .zt-ig__stat{background:var(--i-soft);border-radius:10px;padding:14px;display:grid;gap:8px;align-content:start}
+    .zt-ig__big{font-size:34px;font-weight:700;line-height:1;color:var(--i-accent);font-variant-numeric:tabular-nums}
+    .zt-ig__stat p{margin:0;font-size:14px;line-height:1.45;color:var(--i-ink)}
+    .zt-ig__src{font-size:12px;color:var(--i-muted)}
+    .zt-ig__bar{height:8px;border-radius:999px;background:#fff;border:1px solid var(--i-line);overflow:hidden}
+    .zt-ig__bar span{display:block;height:100%;background:var(--i-accent)}
+    .zt-ig__flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:step}
+    @media (max-width:720px){.zt-ig__flow{grid-template-columns:minmax(0,1fr)}}
+    .zt-ig__flow li{counter-increment:step;position:relative;background:var(--i-soft);border-radius:10px;padding:12px;display:grid;gap:4px;align-content:start}
+    .zt-ig__flow li::before{content:counter(step);display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--i-accent);color:#fff;font-size:12px;font-weight:700}
+    .zt-ig__flow strong{font-size:14px;color:var(--i-ink)}
+    .zt-ig__flow span{font-size:13px;line-height:1.45;color:var(--i-muted)}
+    .zt-ig__matrix{display:grid;grid-template-columns:28px minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto auto;gap:8px}
+    .zt-ig__axis-y{grid-row:1 / span 2;writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--i-muted)}
+    .zt-ig__axis-x{grid-column:2 / span 2;text-align:center;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--i-muted)}
+    .zt-ig__cell{border-radius:10px;padding:12px;display:grid;gap:4px;align-content:start;min-width:0}
+    .zt-ig__cell b{font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+    .zt-ig__cell strong{font-size:15px;color:var(--i-ink)}
+    .zt-ig__cell span{font-size:13px;line-height:1.45;color:var(--i-ink)}
+    .zt-ig__cell.is-go{background:var(--i-high-bg)} .zt-ig__cell.is-go b{color:var(--i-high)}
+    .zt-ig__cell.is-wait{background:var(--i-mid-bg)} .zt-ig__cell.is-wait b{color:var(--i-mid)}
+    .zt-ig__cell.is-check{background:var(--i-soft)} .zt-ig__cell.is-check b{color:var(--i-accent)}
+    .zt-ig__cell.is-low{background:var(--i-low-bg)} .zt-ig__cell.is-low b{color:var(--i-muted)}
+    .zt-ig__types{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    @media (max-width:640px){.zt-ig__types{grid-template-columns:minmax(0,1fr)}}
+    .zt-ig__type{border:1px solid var(--i-line);border-radius:10px;padding:12px;display:grid;gap:8px;align-content:start}
+    .zt-ig__type strong{font-size:15px;color:var(--i-ink)}
+    .zt-ig__type dl{margin:0;display:grid;gap:6px}
+    .zt-ig__type dt{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--i-muted)}
+    .zt-ig__type dd{margin:0;font-size:13px;line-height:1.45;color:var(--i-ink)}
+    .zt-ig__band{position:relative;margin:30px 0 4px}
+    .zt-ig__ticks{position:relative;height:18px;margin-top:6px;font-size:12px;color:var(--i-muted);font-variant-numeric:tabular-nums}
+    .zt-ig__ticks span{position:absolute;transform:translateX(-50%)}
+    .zt-ig__track{display:grid;grid-template-columns:40fr 30fr 30fr;height:28px;border-radius:8px;overflow:hidden;font-size:12px;font-weight:600}
+    .zt-ig__track div{display:flex;align-items:center;justify-content:flex-end;padding-right:10px}
+    .zt-ig__pin{position:absolute;top:-22px;transform:translateX(-50%);font-size:12px;font-weight:600;white-space:nowrap;color:var(--i-ink)}
+    .zt-ig__pin::after{content:"";position:absolute;left:50%;top:18px;width:2px;height:32px;background:var(--i-ink);transform:translateX(-50%)}
+    /* Criteria table: scoped to .zt-crit */
+    .zt-crit table{min-width:640px}
+    .zt-crit thead th{font-size:13px;letter-spacing:.03em}
+    .zt-crit tbody th[scope=row]{font-weight:600;white-space:nowrap}
+    .zt-crit__band th{text-align:left;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 10px}
+    .zt-crit__band th span{font-weight:500;text-transform:none;letter-spacing:0;opacity:.8;margin-left:6px}
+    .zt-crit .is-fit .zt-crit__band th{background:#ede7fd;color:#5b21b6}
+    .zt-crit .is-intent .zt-crit__band th{background:#e3f5ec;color:#0f7b52}
+    .zt-crit .is-negative .zt-crit__band th{background:#fbe7ea;color:#b4233a}
+    .zt-crit .is-fit tr:not(.zt-crit__band) th{box-shadow:inset 3px 0 0 #a78bfa}
+    .zt-crit .is-intent tr:not(.zt-crit__band) th{box-shadow:inset 3px 0 0 #4ade9b}
+    .zt-crit .is-negative tr:not(.zt-crit__band) th{box-shadow:inset 3px 0 0 #f47a8c}
+    .zt-pts{display:inline-block;font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums;padding:3px 9px;border-radius:999px;margin:2px 2px 2px 0;white-space:nowrap}
+    .zt-pts.is-plus{background:#e3f5ec;color:#0f7b52}
+    .zt-pts.is-muted{background:#efeef3;color:#4c4660}
+    .zt-pts.is-minus{background:#fbe7ea;color:#b4233a}
+    .zt-pts.is-signal{background:#ede7fd;color:#5b21b6}
+    .zt-pts-note{display:block;font-size:12px;color:#6b6380;margin-top:2px}
+    .zt-say{display:inline-block;background:#f5f3ff;border:1px solid #e4defa;border-radius:12px 12px 12px 3px;padding:5px 10px;font-size:14px;line-height:1.4}
+    .zt-crit__no{color:#6b6380}
+    .zt-crit__no::before{content:"";display:inline-block;width:10px;height:2px;background:#b4233a;vertical-align:middle;margin-right:8px;border-radius:2px}
+    .zt-crit__filter{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 -4px}
+    .zt-crit__filter button{font:inherit;font-size:13px;font-weight:500;border:1px solid #e4defa;background:#fff;color:#1f1a2e;border-radius:999px;padding:5px 12px;cursor:pointer}
+    .zt-crit__filter button:hover{border-color:#6d28d9}
+    .zt-crit__filter button[aria-pressed="true"]{background:#f5f3ff;border-color:#6d28d9;color:#6d28d9}
+    .zt-crit__filter button:focus-visible{outline:2px solid #6d28d9;outline-offset:2px}
+  </style>
+  <nav class="zt-crumb" aria-label="Breadcrumb"><a href="/blogs">Blog</a> <span aria-hidden="true">›</span> <span>Lead qualification</span></nav>
+
+  <div class="zt-eyebrow">
+    <span>The Marketer's Playbook</span>
+    <span>16 min read</span>
+    <button type="button" class="zt-summarize" data-trigger-question="Summarize this blog: What Lead Scoring Criteria Should You Use? (With Examples)">Summarize this blog</button>
+  </div>
+
+  <h1>What Lead Scoring Criteria Should You Use? (With Examples)</h1>
+
+  <div class="zt-lead">
+    <p><strong>Good lead scoring criteria look at two things: fit (is this the right kind of customer?) and intent (are they ready to buy?). Give each answer 0 to 100 points, combine the two, and sort leads into High, Medium or Low. The examples below show what should earn points and what shouldn't.</strong></p>
+  </div>
+
+  <div class="zt-byline">
+    <span class="zt-avatar" aria-hidden="true">VP</span>
+    <span>Vijay Satya Prakash</span>
+    <time datetime="2026-11-13">November 13, 2026</time>
+  </div>
+
+  <figure class="zt-v zt-callout">
+    <div class="zt-card">
+      <div class="zt-card__head">A number worth knowing</div>
+      <p class="zt-stat">67%</p>
+      <p>of 646 B2B buyers in a Gartner survey said they'd rather buy without talking to a sales rep. 45% had used AI during a recent purchase.</p>
+    </div>
+    <figcaption class="zt-cap">Buyers show who they are and what they want on your website, long before they talk to sales. Source: <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience" target="_blank" rel="noopener">Gartner press release, March 2026</a>.</figcaption>
+  </figure>
+
+  <h2 id="what-is-lead-scoring">What is lead scoring?</h2>
+  <p>Lead scoring gives each lead a number or a grade, so your sales team knows who to call first. Oracle describes it as <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.oracle.com/cx/marketing/what-is-lead-scoring/">"an objective ranking of one sales lead against another"</a>. In other words, it puts your leads in order.</p>
+  <p>Most scoring systems look at two things. Fit asks: is this the right kind of person and company for what you sell? Intent asks: are they ready to buy now, based on what they do and say?</p>
+  <p>Some tools show these two parts separately, as a letter and a number. In <a class="text-violet-700 hover:text-violet-800 underline" href="https://knowledge.hubspot.com/scoring/understand-the-lead-scoring-tool">HubSpot's combined score</a>, the letter (A to C) shows fit and the number (1 to 3) shows engagement. Salesforce calls the fit part a grade and the interest part a score.</p>
+  <p>Scoring is not the same as qualification. Qualification decides if a lead is worth chasing at all, and our <a class="text-violet-700 hover:text-violet-800 underline" href="/blogs/lead-qualification">lead qualification guide</a> covers it. Scoring decides which of those leads your team calls first.</p>
+
+  <figure class="zt-v zt-ig">
+    <div class="zt-card">
+      <div class="zt-card__head">What to do with each mix of fit and intent</div>
+      <div class="zt-ig__matrix">
+        <div class="zt-ig__axis-y">Fit: who they are</div>
+        <div class="zt-ig__cell is-wait"><b>High fit · low intent</b><strong>Stay in touch</strong><span>The right person at the wrong time. Keep in contact, but don't call yet.</span></div>
+        <div class="zt-ig__cell is-go"><b>High fit · high intent</b><strong>Call them now</strong><span>Your best leads. Tell a rep and offer a meeting while they're interested.</span></div>
+        <div class="zt-ig__cell is-low"><b>Low fit · low intent</b><strong>Let automation handle it</strong><span>Answer their questions and let your website content do the rest.</span></div>
+        <div class="zt-ig__cell is-check"><b>Low fit · high intent</b><strong>Check fit first</strong><span>Ready to buy, but check they're a real fit before a rep spends time.</span></div>
+        <div class="zt-ig__axis-x">Intent: how ready they are to buy →</div>
+      </div>
+    </div>
+    <figcaption class="zt-cap">Looking at fit and intent separately tells you what to do next with each lead.</figcaption>
+  </figure>
+
+  <h2 id="why-does-lead-scoring-matter-for-inbound-teams">Why does lead scoring matter for inbound teams?</h2>
+  <p>Lead scoring matters because buyers make most of their decision before they talk to anyone in sales. If your team calls leads in the order they arrive, your best buyers end up waiting in line.</p>
+  <p>Buyer research backs this up. 6sense surveyed more than 4,000 buyers for its 2025 Buyer Experience Report. It found that 94% of buying groups had already ranked their favorite vendors before contacting any of them. That early favorite won 80% of the time, according to <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.businesswire.com/news/home/20251112018032/en/">6sense's release</a>.</p>
+  <p>Sales reps also have less time than you might expect. Salesforce's State of Sales 2026 report surveyed 4,050 sales professionals. The average seller spends only 40% of their time on selling, per <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.salesforce.com/news/stories/state-of-sales-report-announcement-2026/">Salesforce's announcement</a>.</p>
+  <p>So buyers decide early, and reps have limited hours. A lead score tells your team where to spend those hours first.</p>
+
+  <figure class="zt-v zt-ig">
+    <div class="zt-card">
+      <div class="zt-card__head">Why the order of your queue matters</div>
+      <div class="zt-ig__stats">
+        <div class="zt-ig__stat"><span class="zt-ig__big">94%</span><div class="zt-ig__bar" aria-hidden="true"><span style="width:94%"></span></div><p>of buying groups ranked their preferred vendors before first contact with sales.</p><span class="zt-ig__src">6sense, 2025 · 4,000+ buyers</span></div>
+        <div class="zt-ig__stat"><span class="zt-ig__big">80%</span><div class="zt-ig__bar" aria-hidden="true"><span style="width:80%"></span></div><p>of deals went to the vendor buyers favored before talking to sales.</p><span class="zt-ig__src">6sense, 2025 · 4,000+ buyers</span></div>
+        <div class="zt-ig__stat"><span class="zt-ig__big">67%</span><div class="zt-ig__bar" aria-hidden="true"><span style="width:67%"></span></div><p>of B2B buyers would rather buy without a sales rep.</p><span class="zt-ig__src">Gartner, 2026 · 646 buyers</span></div>
+        <div class="zt-ig__stat"><span class="zt-ig__big">40%</span><div class="zt-ig__bar" aria-hidden="true"><span style="width:40%"></span></div><p>of the average seller's time goes to selling.</p><span class="zt-ig__src">Salesforce, 2026 · 4,050 sales professionals</span></div>
+      </div>
+    </div>
+    <figcaption class="zt-cap">Buyers decide early, and sellers have little time. Sources: <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.businesswire.com/news/home/20251112018032/en/">6sense</a>, <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience">Gartner</a>, <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.salesforce.com/news/stories/state-of-sales-report-announcement-2026/">Salesforce</a>.</figcaption>
+  </figure>
+
+  <h2 id="what-criteria-should-a-lead-score-include">What criteria should a lead score include?</h2>
+  <p>A lead score should include three kinds of criteria: fit, intent and negative points. Fit comes from facts the lead shares, such as a work email, job title, company size and country. Intent comes from what the lead does, asks and says.</p>
+  <p>Many teams take their intent criteria from BANT (budget, authority, need, timeline). It's a simple sales checklist for testing whether a deal is real. Our <a class="text-violet-700 hover:text-violet-800 underline" href="/blogs/bant-framework">BANT guide</a> explains each part with example questions.</p>
+  <p>Negative points matter too, because they take points away when a lead is a poor fit. In Adobe's <a class="text-violet-700 hover:text-violet-800 underline" href="https://experienceleague.adobe.com/en/docs/experiences-by-you/implementing-new-instance/building-person-scoring-model">Marketo Engage scoring guide</a>, a company with fewer than 10 employees loses 10 points. So does a lead with no activity in 90 days.</p>
+  <p>The lead scoring criteria examples below are grouped into fit, intent and negative points. Each row shows what should earn points and what shouldn't count on its own.</p>
+
+  <div class="zt-crit__filter" role="group" aria-label="Show criteria" hidden>
+    <button type="button" data-show="all" aria-pressed="true">All 12</button>
+    <button type="button" data-show="fit" aria-pressed="false">Fit</button>
+    <button type="button" data-show="intent" aria-pressed="false">Intent</button>
+    <button type="button" data-show="negative" aria-pressed="false">Negative</button>
+  </div>
+  <div class="blog-table zt-crit">
+    <p class="blog-table__hint">Swipe to see all columns →</p>
+    <div class="blog-table__scroll">
+      <table class="stack-table_stack__vQp5p">
+        <thead>
+          <tr><th scope="col">Criterion</th><th scope="col">Earns points</th><th scope="col">Example points</th><th scope="col">Shouldn't count on its own</th></tr>
+        </thead>
+        <tbody class="zt-crit__group is-fit" data-group="fit">
+          <tr class="zt-crit__band"><th colspan="4" scope="colgroup">Fit <span>who the lead is</span></th></tr>
+          <tr><th scope="row">Email domain</th><td>A work address, such as dana@northwind.com</td><td><span class="zt-pts is-plus">100 work</span> <span class="zt-pts is-muted">30 personal</span></td><td class="zt-crit__no">A placeholder or fake address</td></tr>
+          <tr><th scope="row">Job title</th><td>Director, vice president or C&#8209;suite</td><td><span class="zt-pts is-plus">100 senior</span> <span class="zt-pts is-muted">40 other</span></td><td class="zt-crit__no">A title used as proof of buying authority</td></tr>
+          <tr><th scope="row">Company size</th><td>A headcount inside your best-fit band</td><td><span class="zt-pts is-plus">100</span> <span class="zt-pts is-muted">60</span> <span class="zt-pts is-muted">20</span> <span class="zt-pts-note">by band</span></td><td class="zt-crit__no">A blank answer scored as zero</td></tr>
+          <tr><th scope="row">Country or region</th><td>A market you sell and support in</td><td><span class="zt-pts is-muted">Your call</span></td><td class="zt-crit__no">An IP location you never asked about</td></tr>
+        </tbody>
+        <tbody class="zt-crit__group is-intent" data-group="intent">
+          <tr class="zt-crit__band"><th colspan="4" scope="colgroup">Intent <span>how ready they are to buy</span></th></tr>
+          <tr><th scope="row">Demo request</th><td>Fills in a "request a demo" form</td><td><span class="zt-pts is-plus">+50</span> <span class="zt-pts-note">Marketo example</span></td><td class="zt-crit__no">A content download</td></tr>
+          <tr><th scope="row">Purchase</th><td><span class="zt-say">Can you send the contract so we can start?</span></td><td><span class="zt-pts is-signal">Buying signal</span></td><td class="zt-crit__no">A pricing question or feature comparison</td></tr>
+          <tr><th scope="row">Timing</th><td><span class="zt-say">We need this before our event next month.</span></td><td><span class="zt-pts is-signal">Buying signal</span></td><td class="zt-crit__no">"Maybe later"</td></tr>
+          <tr><th scope="row">Authority</th><td><span class="zt-say">I approve tools for our team.</span></td><td><span class="zt-pts is-signal">Buying signal</span></td><td class="zt-crit__no">A job title or department</td></tr>
+          <tr><th scope="row">Need</th><td><span class="zt-say">Our bounce rate is too high.</span></td><td><span class="zt-pts is-signal">Buying signal</span></td><td class="zt-crit__no">General questions about features</td></tr>
+          <tr><th scope="row">Budget</th><td><span class="zt-say">We have budget set aside this quarter.</span></td><td><span class="zt-pts is-signal">Buying signal</span></td><td class="zt-crit__no">A pricing question</td></tr>
+        </tbody>
+        <tbody class="zt-crit__group is-negative" data-group="negative">
+          <tr class="zt-crit__band"><th colspan="4" scope="colgroup">Negative <span>points you take away</span></th></tr>
+          <tr><th scope="row">Very small company</th><td>Fewer than 10 employees, if you sell upmarket</td><td><span class="zt-pts is-minus">-10</span> <span class="zt-pts-note">Marketo example</span></td><td class="zt-crit__no">A company size you never asked about</td></tr>
+          <tr><th scope="row">Inactivity</th><td>No interaction in the last 90 days</td><td><span class="zt-pts is-minus">-10</span> <span class="zt-pts-note">Marketo example</span></td><td class="zt-crit__no">A single quiet week</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p>The point values are examples, so adjust them to suit your own customers. The email, job title and company size values come from the worked example in <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.ziptier.ai/docs/lead-scoring">ZipTier's lead scoring docs</a>.</p>
+
+  <h2 id="how-is-a-lead-score-calculated">How is a lead score calculated?</h2>
+  <p>A lead score is calculated in one of two ways: add up points, or average and weight them. Either way, you finish by comparing the score to a cutoff, which decides what happens next.</p>
+
+  <figure class="zt-v zt-ig">
+    <div class="zt-card">
+      <div class="zt-card__head">How every lead scoring system works</div>
+      <ol class="zt-ig__flow">
+        <li><strong>Collect signals</strong><span>Facts like job title and company size, plus what the lead does or says.</span></li>
+        <li><strong>Give points</strong><span>Decide how many points each answer earns or loses.</span></li>
+        <li><strong>Combine</strong><span>Add the points together, or average them in groups.</span></li>
+        <li><strong>Compare to a cutoff</strong><span>The score becomes a label, like High, Medium or Low.</span></li>
+        <li><strong>Act</strong><span>If the score is high enough, tell sales or offer a meeting.</span></li>
+      </ol>
+    </div>
+    <figcaption class="zt-cap">HubSpot, Salesforce, Adobe Marketo and ZipTier all follow these five steps. What differs is where the signals come from and who sets the points.</figcaption>
+  </figure>
+  <p>Adding up points is the simpler method. Each rule adds or takes away points, and the total is the score. In Adobe's Marketo example, a demo request earns 50 points, a white paper download 5 and a trade show visit 15. The lead goes to sales at 50 points.</p>
+  <p>The problem is that totals can keep growing. HubSpot solves this with limits, and its help guide shows a total limit of 100, split into 60 and 40 for two groups.</p>
+  <p>Averaging and weighting keeps every lead on the same 0 to 100 scale, so a score of 70 means the same thing on every campaign. It works in four steps:</p>
+  <ol>
+    <li class="mb-2">Give every possible answer 0 to 100 points. For example, a work email earns 100 and a personal email earns 30.</li>
+    <li class="mb-2">Average the points in each group. This gives you a fit score and an intent score, each out of 100.</li>
+    <li class="mb-2">Decide how much each group counts, so the two add up to 100%. For example, fit counts 40% and intent 60%.</li>
+    <li class="mb-2">Compare the final score to your cutoffs. In the examples below, 70 or more is High, 40 to 69 is Medium, and under 40 is Low.</li>
+  </ol>
+
+  <figure class="zt-v">
+    <div class="zt-card">
+      <div class="zt-card__head">The weighted formula</div>
+      <p class="zt-formula">Score = (fit weight × fit score) + (intent weight × intent score)</p>
+      <p>In words: how much fit counts, times the fit score, plus how much intent counts, times the intent score.</p>
+    </div>
+    <figcaption class="zt-cap">One score per lead, built from two averages and two weights.</figcaption>
+  </figure>
+
+  <h3>How do two leads with the same intent end up with different grades?</h3>
+  <p>Two leads can sound equally interested and still get different grades, because their fit is different. Here are two lead scoring examples, adapted from ZipTier's documentation, where fit counts 40% and intent counts 60%.</p>
+
+  <div class="blog-table">
+    <p class="blog-table__hint">Swipe to see all columns →</p>
+    <div class="blog-table__scroll">
+      <table class="stack-table_stack__vQp5p">
+        <thead>
+          <tr><th>Step</th><th>Dana</th><th>Sam</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Email</td><td>dana@northwind.com: 100</td><td>sam@gmail.com: 30</td></tr>
+          <tr><td>Job title</td><td>Director: 100</td><td>Student: 40</td></tr>
+          <tr><td>Company size</td><td>50 to 100: 60</td><td>Not answered, left out</td></tr>
+          <tr><td>Fit score</td><td>(100 + 100 + 60) ÷ 3 = 86.7</td><td>(30 + 40) ÷ 2 = 35.0</td></tr>
+          <tr><td>Intent</td><td>Medium: 60</td><td>Medium: 60</td></tr>
+          <tr><td>Weighted total</td><td>(0.4 × 86.7) + (0.6 × 60) = 70.7</td><td>(0.4 × 35.0) + (0.6 × 60) = 50.0</td></tr>
+          <tr><td>Grade</td><td>High</td><td>Medium</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p>Dana just clears the High cutoff, so a rep should call her first. Sam lands in Medium, so he can get follow-up emails instead of a call. Try the same math on your own lead below.</p>
+
+  <figure class="zt-v zt-ig">
+    <div class="zt-card">
+      <div class="zt-card__head">Where Dana and Sam land</div>
+      <div class="zt-ig__band" role="img" aria-label="Score band from 0 to 100: Low below 40, Medium 40 to 70, High 70 and above. Sam scores 50.0, Medium. Dana scores 70.7, High.">
+        <span class="zt-ig__pin" style="left:50%" aria-hidden="true">Sam 50.0</span>
+        <span class="zt-ig__pin" style="left:70.7%" aria-hidden="true">Dana 70.7</span>
+        <div class="zt-ig__track" aria-hidden="true">
+          <div style="background:var(--i-low-bg);color:var(--i-muted)">Low</div>
+          <div style="background:var(--i-mid-bg);color:var(--i-mid)">Medium</div>
+          <div style="background:var(--i-high-bg);color:var(--i-high)">High</div>
+        </div>
+        <div class="zt-ig__ticks" aria-hidden="true"><span style="left:0;transform:none">0</span><span style="left:40%">40</span><span style="left:70%">70</span><span style="left:100%;transform:translateX(-100%)">100</span></div>
+      </div>
+    </div>
+    <figcaption class="zt-cap">Both sound equally interested, but Dana is a better fit. She clears High by 0.7 points, and Sam sits in the middle of Medium.</figcaption>
+  </figure>
+
+  <figure class="zt-v zt-tool" id="zt-ls-calc">
+    <div class="zt-card">
+      <div class="zt-card__head">Try it: score a lead</div>
+      <div class="zt-tool__row" role="group" aria-label="Example leads">
+        <button type="button" data-preset="dana" aria-pressed="true">Dana</button>
+        <button type="button" data-preset="sam" aria-pressed="false">Sam</button>
+        <button type="button" data-preset="guard" aria-pressed="false">Perfect profile, low intent</button>
+      </div>
+      <div class="zt-tool__grid">
+        <div class="zt-tool__controls">
+          <label for="zt-ls-email">Email
+            <select id="zt-ls-email"><option value="100">Company domain · 100</option><option value="30">Personal domain · 30</option><option value="na">Not answered</option></select></label>
+          <label for="zt-ls-title">Job title
+            <select id="zt-ls-title"><option value="100">Director, VP or C&#8209;suite · 100</option><option value="40">Any other title · 40</option><option value="na">Not answered</option></select></label>
+          <label for="zt-ls-size">Company size
+            <select id="zt-ls-size"><option value="100">100 or more employees · 100</option><option value="60">25 to 100 employees · 60</option><option value="20">Any other size · 20</option><option value="na">Not answered</option></select></label>
+          <label for="zt-ls-intent">Intent detected in the conversation
+            <select id="zt-ls-intent"><option value="100">High · 100</option><option value="60">Medium · 60</option><option value="30">Low · 30</option></select></label>
+          <label for="zt-ls-weight">Fit weight: <span id="zt-ls-wout"></span>
+            <input type="range" id="zt-ls-weight" min="0" max="100" step="10" value="40"></label>
+          <label class="zt-tool__check" for="zt-ls-zero"><input type="checkbox" id="zt-ls-zero"> Count skipped questions as 0</label>
+          <label class="zt-tool__check" for="zt-ls-guard"><input type="checkbox" id="zt-ls-guard"> High needs an intent score of 50 or more</label>
+        </div>
+        <div class="zt-tool__out" aria-live="polite">
+          <div class="zt-tool__score"><span class="zt-tool__num" id="zt-ls-score">70.7</span><span class="zt-tool__pill is-High" id="zt-ls-grade">High</span></div>
+          <div class="zt-tool__meter" aria-hidden="true"><div class="zt-tool__fill" id="zt-ls-fill" style="width:70.7%"></div><div class="zt-tool__tick" style="left:40%"></div><div class="zt-tool__tick" style="left:70%"></div></div>
+          <div class="zt-tool__scale" aria-hidden="true"><span style="left:0;transform:none">0</span><span style="left:40%">40</span><span style="left:70%">70</span><span style="left:100%;transform:translateX(-100%)">100</span></div>
+          <pre id="zt-ls-math">Fit    = (100 + 100 + 60) ÷ 3 = 86.7
+Intent = 60
+Score  = (0.4 × 86.7) + (0.6 × 60)
+       = 70.7</pre>
+          <p class="zt-tool__flag" id="zt-ls-flag" hidden></p>
+          <p class="zt-tool__note" id="zt-ls-note">All fit questions answered.</p>
+        </div>
+      </div>
+    </div>
+    <figcaption class="zt-cap">Change any answer to see the grade move. Point values, weights, cutoffs and the intent guardrail follow the examples in <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.ziptier.ai/docs/lead-scoring">ZipTier's lead scoring docs</a>.</figcaption>
+  </figure>
+
+  <h3>What happens to old activity and missing answers?</h3>
+  <p>Old activity should count for less, and skipped questions usually shouldn't count at all. Both choices can change a lead's grade, so decide them on purpose.</p>
+  <p>Score decay means old actions slowly lose their points. In HubSpot, you can reduce points every 1, 3, 6 or 12 months. At 50% a month, a visit worth 10 points is worth 5 a month later. Salesforce does this automatically in its Einstein behavior score.</p>
+  <p>Skipped questions need a rule too. In the example above, Sam didn't share his company size, so that question was left out of his average. If it had counted as zero, his fit score would drop from 35.0 to 23.3. That would punish him just for skipping an optional question.</p>
+
+  <figure class="zt-v zt-tool" id="zt-ls-decay">
+    <div class="zt-card">
+      <div class="zt-card__head">Try it: watch a 10-point visit decay</div>
+      <div class="zt-tool__grid">
+        <div class="zt-tool__controls">
+          <label for="zt-ls-rate">Decay per interval: <span id="zt-ls-rout"></span>
+            <input type="range" id="zt-ls-rate" min="10" max="100" step="5" value="50"></label>
+          <label for="zt-ls-int">Interval
+            <select id="zt-ls-int"><option value="1">Every month</option><option value="3">Every 3 months</option><option value="6">Every 6 months</option><option value="12">Every 12 months</option></select></label>
+          <p class="zt-tool__note" id="zt-ls-dnote">A 10-point activity is worth 5 after 1 month and reaches 0 at month 2.</p>
+        </div>
+        <div class="zt-tool__out"><div class="zt-tool__chart" id="zt-ls-chart" role="img" aria-label="Points remaining by month over 12 months"></div></div>
+      </div>
+    </div>
+    <figcaption class="zt-cap">At each step, points drop by the same share of the original value, as <a class="text-violet-700 hover:text-violet-800 underline" href="https://knowledge.hubspot.com/scoring/understand-the-lead-scoring-tool">HubSpot's knowledge base</a> describes linear decay.</figcaption>
+  </figure>
+
+  <h2 id="which-signals-look-like-intent-but-arent">Which signals look like intent but aren't?</h2>
+  <p>Pricing questions, feature comparisons and polite interest look like buying signals, but often they aren't. Students, researchers and competitors ask the same questions every day.</p>
+  <p>If these add points, your High list fills up with people who were never going to buy. Your sales team soon learns to ignore the alerts. Then a real buyer waits as long as everyone else.</p>
+  <p>Watch out for these look-alikes when you set your intent rules:</p>
+  <ul>
+    <li class="mb-2">A pricing question on its own</li>
+    <li class="mb-2">A feature comparison on its own</li>
+    <li class="mb-2">Vague interest, such as "maybe later"</li>
+    <li class="mb-2">A job title or department on its own</li>
+    <li class="mb-2">General questions about how the product works</li>
+  </ul>
+  <p>Look for clear evidence, not just the topic of a question. A pricing question counts when it comes with a deadline, a budget or a real problem. A job title counts toward fit, but it doesn't show buying power until the person says they approve the purchase. Use one simple test: would a rep do something different because of this?</p>
+
+  <figure class="zt-v zt-tool" id="zt-ls-quiz">
+    <div class="zt-card">
+      <div class="zt-card__head">Try it: intent or not?</div>
+      <p class="zt-tool__note">Decide whether each visitor message should raise a lead's intent score on its own.</p>
+      <ul class="zt-tool__list" id="zt-ls-list">
+        <li class="zt-tool__item"><q>How much does it cost?</q></li>
+        <li class="zt-tool__item"><q>We need this live before our event next month.</q></li>
+      </ul>
+      <div class="zt-tool__row"><strong id="zt-ls-tally">0 of 8 answered</strong><button type="button" id="zt-ls-reset">Start over</button></div>
+    </div>
+    <figcaption class="zt-cap">Signals and exclusions follow <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.ziptier.ai/docs/high-scoring-lead-capture">ZipTier's high-scoring lead capture docs</a>, which require "clear, explicit evidence".</figcaption>
+  </figure>
+
+  <h2 id="should-you-use-rule-based-or-predictive-lead-scoring">Should you use rule-based or predictive lead scoring?</h2>
+  <p>Start with rule-based scoring, where your team sets the points, and move to predictive scoring once you have enough data. In predictive scoring, software learns the points from your past deals. Rules are easy to understand from day one. Predictive models can spot patterns people miss, but they need history to learn from.</p>
+
+  <div class="blog-table">
+    <p class="blog-table__hint">Swipe to see all columns →</p>
+    <div class="blog-table__scroll">
+      <table class="stack-table_stack__vQp5p">
+        <thead>
+          <tr><th>Question</th><th>Rule-based</th><th>Predictive (AI)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Who sets the points</td><td>Your team</td><td>Software that learns from past deals</td></tr>
+          <tr><td>Data needed to start</td><td>None</td><td>HubSpot AI scores: at least 50 contacts, 25 converted and 25 not. Salesforce Einstein behavior scoring: a year of engagement data and 20+ prospects linked to opportunities</td></tr>
+          <tr><td>Strength</td><td>Easy to explain every point</td><td>Spots patterns people miss</td></tr>
+          <tr><td>Weakness</td><td>Goes out of date as buyers change</td><td>Harder to explain; needs lots of past leads</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p>These minimums come from <a class="text-violet-700 hover:text-violet-800 underline" href="https://knowledge.hubspot.com/scoring/understand-the-lead-scoring-tool">HubSpot's knowledge base</a> and <a class="text-violet-700 hover:text-violet-800 underline" href="https://trailhead.salesforce.com/content/learn/modules/lead-scoring-and-grading-in-account-engagement/einstein-scoring-in-account-engagement">Salesforce Trailhead</a>. HubSpot's AI scores also need a Marketing Hub Enterprise plan.</p>
+  <p>Predictive models can be very accurate with the right data. A 2025 study in <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1554325/full">Frontiers in Artificial Intelligence</a> tested 15 models on 16,600 sales records from one B2B software company. The best one, a model called gradient boosting, predicted which leads became real sales opportunities with 98.4% accuracy.</p>
+  <p>Don't expect the same result straight away. The study used one company's data, and its best clues were where the lead came from and its status in the CRM. Your system may record those differently.</p>
+  <p>Whichever method you choose, use the time it saves well. In a 2026 Gartner survey of 210 sales leaders, AI saved sellers 4.8 hours a week on average. Teams that put those hours into higher-value work were 3.1 times more likely to beat their goals for turning leads into sales opportunities, per <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.gartner.com/en/newsroom/press-releases/2026-05-19-gartner-survey-finds-ai-saves-sellers-nearly-five-hours-per-week-yet-seventy-two-percent-of-sales-organizations-fail-to-reinvest-time-in-high-value-activities">Gartner's release</a>.</p>
+
+  <h2 id="what-are-lead-scoring-best-practices">What are lead scoring best practices?</h2>
+  <p>The first of the lead scoring best practices is to change one setting at a time. Points, weights and cutoffs all affect the same final score. Change three at once, and you won't know which one helped.</p>
+  <p>Give each change a week of real leads before you judge it. Then keep these habits:</p>
+  <ul>
+    <li class="mb-2"><strong>Only give points for things you'd act on.</strong> If two job titles get the same follow-up, give them the same points.</li>
+    <li class="mb-2"><strong>Test new fit rules before they count.</strong> Set fit to 0%, check the grades it would give, then turn it up.</li>
+    <li class="mb-2"><strong>Don't count skipped questions as zero.</strong> That punishes the visitors who chatted most naturally.</li>
+    <li class="mb-2"><strong>Ask for real interest before High.</strong> A perfect profile with no buying signal is the right person at the wrong time.</li>
+    <li class="mb-2"><strong>Start with a high bar.</strong> Adobe suggests passing leads to sales at 100 points when you're new, so one email open can't qualify a lead.</li>
+    <li class="mb-2"><strong>Match each grade to a reply time.</strong> In Oracle's example, A1 and B1 leads get a reply within 24 hours, and A2 to B3 leads within 48.</li>
+    <li class="mb-2"><strong>Check how your grades are spread.</strong> If almost every lead is High, your cutoffs are too low to be useful.</li>
+  </ul>
+  <p>A good score loses its value if nobody acts on it quickly. In a 2011 HBR study of 2,241 companies, only 37% replied to web leads within an hour. The average reply took 42 hours, per <a class="text-violet-700 hover:text-violet-800 underline" href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads">Harvard Business Review</a>. Our guides to <a class="text-violet-700 hover:text-violet-800 underline" href="/blogs/speed-to-lead">speed to lead</a> and <a class="text-violet-700 hover:text-violet-800 underline" href="/blogs/lead-routing">lead routing</a> cover what to do once a lead scores High.</p>
+
+  <h2 id="how-does-ziptier-score-a-lead-in-chat">How does ZipTier score a lead in chat?</h2>
+  <p>ZipTier is documented to grade every lead it captures in chat as High, Medium or Low. It uses the same fit and intent method described above. Because it's our own product, this section only repeats what the public <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.ziptier.ai/docs/lead-scoring">documentation</a> says.</p>
+  <p>Most CRM scoring looks at clicks, page views and forms to guess interest. A chat assistant can read what visitors say, like a deadline, a budget or a problem they need solved. ZipTier's intent score is built on that. Our guide to <a class="text-violet-700 hover:text-violet-800 underline" href="/blogs/website-chatbot-qualify-leads">qualifying leads with a website chatbot</a> shows how the conversation works.</p>
+
+  <figure class="zt-v">
+    <div class="zt-card">
+      <div class="zt-card__head">From first message to sales alert</div>
+      <ol class="zt-steps">
+        <li class="mb-2"><strong>Capture.</strong> The AI assistant asks lead questions in the chat, one at a time, starting with an email or phone number. By default it asks after the second message, then every three messages, and straight away if it detects high intent.</li>
+        <li class="mb-2"><strong>Fit.</strong> You set rules that give each answer 0 to 100 points. Fit starts at 0%, so it has no effect until you turn it up.</li>
+        <li class="mb-2"><strong>Intent.</strong> The AI looks for five signals in the chat: purchase, timing, authority, need and budget. It needs "clear, explicit evidence", so a pricing question alone doesn't count.</li>
+        <li class="mb-2"><strong>Grade.</strong> By default, intent counts 100% and fit 0%. Medium starts at 40 and High at 70. Two optional safety rules can keep a lead at Medium.</li>
+        <li class="mb-2"><strong>Alert.</strong> About five minutes after a lead scores High, ZipTier checks again. If it's still High, sales gets an email at up to five addresses, and the lead is added to HubSpot.</li>
+      </ol>
+    </div>
+    <figcaption class="zt-cap">Documented behavior, per the <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.ziptier.ai/docs/high-scoring-lead-capture">high-scoring lead capture</a> and <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.ziptier.ai/docs/lead-scoring">lead scoring</a> docs.</figcaption>
+  </figure>
+
+  <p>The two safety rules match the advice above. One says a lead needs a minimum intent score before it can be graded High. The other keeps a lead at Medium if they shared too few details to judge fit. In the docs' example, a Director with a work email scores 72.0, but low intent keeps them at Medium.</p>
+  <p>The alert includes the lead's details, a summary of the chat and the buying signals found. You can also show meeting booking only to high-scoring leads, with Calendly or Google Calendar opening inside the chat. Scores appear in the Analytics leads view, in each lead's details and in CSV exports.</p>
+  <p>Know the limits before you choose. Only HubSpot has a direct CRM connection; other CRMs get email alerts and a CSV export with score and intent. Scoring changes only apply to chats graded after you save, not to older leads. The knowledge base must be in English, though visitors can chat in 40+ languages. Live Chat with your team starts only when a visitor asks for it, and it's on paid plans only.</p>
+
+  <h2 id="how-do-lead-scoring-tools-compare">How do lead scoring tools compare?</h2>
+  <p>Lead scoring software falls into three groups. CRMs (customer relationship management tools, where sales teams keep contact records) score clicks and profile details. Account platforms score website activity from whole companies. Chat assistants score what a visitor says. ZipTier makes one of the tools below, so keep that in mind when you read our row.</p>
+  <p>Every other row comes from each vendor's own website, checked on November 11 and 12, 2026.</p>
+
+  <figure class="zt-v zt-ig">
+    <div class="zt-card">
+      <div class="zt-card__head">Three kinds of lead scoring tool</div>
+      <div class="zt-ig__types">
+        <div class="zt-ig__type"><strong>CRM and marketing automation</strong><dl><dt>Reads</dt><dd>Profile fields, page visits, email opens and clicks</dd><dt>Scores</dt><dd>Each person or contact</dd><dt>Examples</dt><dd>HubSpot, Salesforce Account Engagement, Adobe Marketo Engage</dd></dl></div>
+        <div class="zt-ig__type"><strong>Account platform</strong><dl><dt>Reads</dt><dd>Website activity from whole companies</dd><dt>Scores</dt><dd>Whole accounts</dd><dt>Example</dt><dd>Qualified Signals</dd></dl></div>
+        <div class="zt-ig__type"><strong>Chat assistant</strong><dl><dt>Reads</dt><dd>What the visitor says: timing, budget, need, authority</dd><dt>Scores or qualifies</dt><dd>Each person in the conversation</dd><dt>Examples</dt><dd>ZipTier, Intercom Fin for Sales, Tidio Lyro</dd></dl></div>
+      </div>
+    </div>
+    <figcaption class="zt-cap">Grouped from each vendor's own pages, checked November 11 and 12, 2026. Details and prices are in the table below.</figcaption>
+  </figure>
+
+  <div class="blog-table">
+    <p class="blog-table__hint">Swipe to see all columns →</p>
+    <div class="blog-table__scroll">
+      <table class="stack-table_stack__vQp5p">
+        <thead>
+          <tr><th>Tool</th><th>Type</th><th>What it scores</th><th>How the result looks</th><th>Published price or requirement</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a class="text-violet-700 hover:text-violet-800 underline" href="https://knowledge.hubspot.com/scoring/understand-the-lead-scoring-tool">HubSpot</a></td><td>CRM</td><td>Fit from properties, engagement from visits, opens and clicks</td><td>High, Medium or Low; combined A1 to C3</td><td>Marketing or Sales Hub Professional or Enterprise</td></tr>
+          <tr><td><a class="text-violet-700 hover:text-violet-800 underline" href="https://trailhead.salesforce.com/content/learn/modules/lead-scoring-and-grading-in-account-engagement/einstein-scoring-in-account-engagement">Salesforce Account Engagement</a></td><td>CRM and marketing automation</td><td>Prospect activity, with a separate grade for fit</td><td>Einstein behavior score from 0 to 100, updated about every four hours</td><td>A year of engagement data for Einstein scoring</td></tr>
+          <tr><td><a class="text-violet-700 hover:text-violet-800 underline" href="https://qualified.com/blog/the-qualified-signals-ai-predictive-model">Qualified Signals</a></td><td>Account platform</td><td>Whole companies, from activity on your own website</td><td>A 0 to 100 degree "temperature": Cold, Warm, Hot or On Fire</td><td><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.qualified.com/pricing">Contact us</a></td></tr>
+          <tr><td><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.intercom.com/help/en/articles/12521150-train-fin-as-a-sales-development-rep-sdr">Intercom Fin for Sales</a></td><td>Chat assistant</td><td>Prospects, checked against rules you set</td><td>A yes or no on qualified, then passed on; no number score described</td><td><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.intercom.com/help/en/articles/13927115-fin-for-sales-faqs">$9.99 per qualification</a>, with a helpdesk seat on an Essential, Advanced or Expert plan</td></tr>
+          <tr><td><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.tidio.com/home-sales/">Tidio Lyro</a></td><td>Chat assistant</td><td>Described as handling "lead qualification without human assistance"</td><td>No lead score listed on the pricing page</td><td><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.tidio.com/pricing/">Starter $24.17 a month; Lyro from $32.50 a month</a></td></tr>
+          <tr><td><a class="text-violet-700 hover:text-violet-800 underline" href="https://salesloft.com/platform/drift/engage">Drift (Salesloft)</a></td><td>Chat</td><td>Salesloft's page now says "We've transitioned from Drift to 1mind"</td><td>Not described</td><td>Not published</td></tr>
+          <tr><td><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.ziptier.ai/docs/lead-scoring">ZipTier</a></td><td>Chat assistant</td><td>Each lead captured in chat, on fit and intent</td><td>High, Medium or Low, with weights, rules and cutoffs per campaign</td><td>Free plan; $99, $499 or $1,999 a month</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p>Qualified's temperature bands come from a Qualified blog post from February 2022, so check them with the vendor before relying on them.</p>
+
+  <h3>What should you test in any lead scoring tool?</h3>
+  <p>Ask the same six questions of any lead scoring tools you consider, including ours:</p>
+  <ul>
+    <li class="mb-2"><strong>What gets scored?</strong> Company scores suit teams that sell to a list of named accounts. Person scores suit fast follow-up on inbound leads.</li>
+    <li class="mb-2"><strong>What feeds the score?</strong> Forms, page visits and conversations each show a different part of a buyer's interest.</li>
+    <li class="mb-2"><strong>Can you see the math?</strong> Ask the vendor to score one of your real leads in front of you.</li>
+    <li class="mb-2"><strong>Can a weak signal hold back a strong one?</strong> You want a way to stop a perfect profile with no interest from being flagged as urgent.</li>
+    <li class="mb-2"><strong>Where does the score go?</strong> Check if it reaches your CRM, an email alert, a CSV file or all three.</li>
+    <li class="mb-2"><strong>How is it priced?</strong> Paying per seat, per conversation, per result or by custom quote adds up very differently.</li>
+  </ul>
+  <p>The first question matters because many people buy together. Forrester's 2026 State of Business Buying research says a typical purchase involves 13 people inside the company and nine outside influencers, per <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.forrester.com/press-newsroom/forrester-2026-the-state-of-business-buying/">Forrester's release</a>. A person score catches the one who contacts you, while a company score tracks the whole group.</p>
+  <p>For a wider look at chat tools that capture leads, see our <a class="text-violet-700 hover:text-violet-800 underline" href="/compare/best-ai-chatbot-lead-capture">lead capture chatbot comparison</a> and our guide to the <a class="text-violet-700 hover:text-violet-800 underline" href="/blogs/ai-sales-assistant-inbound-leads">AI sales assistant for inbound leads</a>.</p>
+
+  <h2 id="faq">FAQs</h2>
+  <details open>
+    <summary>How do I score inbound leads?</summary>
+    <p>Give each answer a lead shares 0 to 100 points, and average them into a fit score and an intent score. Decide how much each counts, so the two add up to 100%. Then compare the result to cutoffs, such as 70 for High and 40 for Medium.</p>
+  </details>
+  <details>
+    <summary>What's the difference between lead scoring and lead grading?</summary>
+    <p>A grade usually shows fit, like job title and company size, as a letter. A score usually shows interest as a number. HubSpot's combined score uses both: A to C for fit and 1 to 3 for engagement.</p>
+  </details>
+  <details>
+    <summary>What's the difference between lead scoring and lead qualification?</summary>
+    <p>Lead qualification decides if a lead is worth chasing at all. Lead scoring puts those leads in order, so sales knows who to call first. Many teams qualify with a checklist like BANT, then use a score to set the order.</p>
+  </details>
+  <details>
+    <summary>What score should trigger a handoff to sales?</summary>
+    <p>There's no single right number, because it depends on how you give points. Adobe's Marketo example passes leads to sales at 50 points and suggests 100 if you're just starting. On ZipTier's 0 to 100 scale, the default High cutoff is 70.</p>
+  </details>
+  <details>
+    <summary>Should a pricing question raise a lead's score?</summary>
+    <p>Not on its own, because students, researchers and competitors ask about price too. Count it when it comes with a deadline, a budget or a real business problem.</p>
+  </details>
+  <details>
+    <summary>How accurate is AI lead scoring?</summary>
+    <p>It can be very accurate when it learns from a company's own history. A 2025 study in Frontiers in Artificial Intelligence found one model was right 98.4% of the time on 16,600 records from one B2B software company. Your results will depend on how much data you have and how clean it is.</p>
+  </details>
+  <details>
+    <summary>Which AI chatbot platforms can capture, score and route high-intent leads?</summary>
+    <p>Several platforms qualify or score website leads, but they score different things. Some grade each person from what they say in the chat, while others score whole companies from website visits. Compare them on what feeds the score, whether you can see the math and where the result goes.</p>
+  </details>
+
+  <h2 id="in-a-nutshell">In a nutshell</h2>
+  <p>Score fit and intent separately, then combine them in a way your sales team understands. Only give points for things that would change what your team does next, and take points away for poor fit. Let clear buying signals, not pricing questions or page views, move a lead to High. Start with simple rules, try predictive scoring once you have enough data, and change one setting at a time.</p>
+
+  <h2 id="sources">Sources</h2>
+  <p>All pages checked on November 11 and 12, 2026.</p>
+  <ul>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience">Gartner, "Gartner Sales Survey Finds 67% of B2B Buyers Prefer a Rep-Free Experience", March 9, 2026</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.gartner.com/en/newsroom/press-releases/2026-05-19-gartner-survey-finds-ai-saves-sellers-nearly-five-hours-per-week-yet-seventy-two-percent-of-sales-organizations-fail-to-reinvest-time-in-high-value-activities">Gartner, "AI Saves Sellers Nearly Five Hours per Week", May 19, 2026</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.businesswire.com/news/home/20251112018032/en/">6sense, 2025 Buyer Experience Report release, November 12, 2025</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.salesforce.com/news/stories/state-of-sales-report-announcement-2026/">Salesforce, State of Sales 2026, February 3, 2026</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.forrester.com/press-newsroom/forrester-2026-the-state-of-business-buying/">Forrester, The State of Business Buying, 2026, January 21, 2026</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1554325/full">González-Flores, Rubiano-Moreno and Sosa-Gómez, "The relevance of lead prioritization: a B2B lead scoring model based on machine learning", Frontiers in Artificial Intelligence, 2025</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads">Oldroyd, McElheran and Elkington, "The Short Life of Online Sales Leads", Harvard Business Review, March 2011</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.oracle.com/cx/marketing/what-is-lead-scoring/">Oracle: What is lead scoring?</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://knowledge.hubspot.com/scoring/understand-the-lead-scoring-tool">HubSpot: Understand the lead scoring tool</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://trailhead.salesforce.com/content/learn/modules/lead-scoring-and-grading-in-account-engagement/einstein-scoring-in-account-engagement">Salesforce Trailhead: Einstein scoring in Account Engagement</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://experienceleague.adobe.com/en/docs/experiences-by-you/implementing-new-instance/building-person-scoring-model">Adobe: Building a person scoring model</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.ziptier.ai/docs/lead-scoring">ZipTier docs: Lead Scoring</a> and <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.ziptier.ai/docs/high-scoring-lead-capture">High-Scoring Lead Capture</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.ziptier.ai/llms-full.txt">ZipTier llms-full.txt</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.intercom.com/help/en/articles/13927115-fin-for-sales-faqs">Intercom: Fin for Sales FAQs</a> and <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.intercom.com/help/en/articles/12521150-train-fin-as-a-sales-development-rep-sdr">Train Fin as a sales development rep</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://qualified.com/blog/the-qualified-signals-ai-predictive-model">Qualified: Signals AI predictive model</a> and <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.qualified.com/pricing">Pricing</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://www.tidio.com/home-sales/">Tidio: Sales</a> and <a class="text-violet-700 hover:text-violet-800 underline" href="https://www.tidio.com/pricing/">Pricing</a></li>
+    <li class="mb-2"><a class="text-violet-700 hover:text-violet-800 underline" href="https://salesloft.com/platform/drift/engage">Salesloft: AI Chat Agent for B2B Sales (Drift Engage page)</a></li>
+  </ul>
+  <script>
+  (function(){
+    var $=function(id){return document.getElementById(id);};
+    if(!$('zt-ls-calc')) return;
+    var fmt=function(n){return (Math.round(n*10)/10).toFixed(1);};
+    var presets={dana:{e:'100',t:'100',s:'60',i:'60',w:40,z:false,g:false},sam:{e:'30',t:'40',s:'na',i:'60',w:40,z:false,g:false},guard:{e:'100',t:'100',s:'100',i:'30',w:60,z:false,g:true}};
+    var btns=document.querySelectorAll('#zt-ls-calc [data-preset]');
+    function press(name){for(var k=0;k<btns.length;k++){btns[k].setAttribute('aria-pressed',btns[k].getAttribute('data-preset')===name?'true':'false');}}
+    function calc(){
+      var zero=$('zt-ls-zero').checked, vals=[$('zt-ls-email').value,$('zt-ls-title').value,$('zt-ls-size').value], used=[], skipped=0;
+      vals.forEach(function(v){if(v==='na'){skipped++; if(zero) used.push(0);} else used.push(+v);});
+      var fit=used.length?used.reduce(function(a,b){return a+b;},0)/used.length:0, intent=+$('zt-ls-intent').value;
+      var wf=+$('zt-ls-weight').value/100, wi=1-wf, score=wf*fit+wi*intent, r=Math.round(score*10)/10;
+      var grade=r>=70?'High':r>=40?'Medium':'Low', held=false;
+      if($('zt-ls-guard').checked && grade==='High' && intent<50){grade='Medium';held=true;}
+      $('zt-ls-wout').textContent=Math.round(wf*100)+'% fit, '+Math.round(wi*100)+'% intent';
+      $('zt-ls-score').textContent=fmt(score);
+      var g=$('zt-ls-grade'); g.textContent=grade; g.className='zt-tool__pill is-'+grade;
+      $('zt-ls-fill').style.width=Math.max(0,Math.min(100,score))+'%';
+      $('zt-ls-math').textContent='Fit    = '+(used.length?'('+used.join(' + ')+') ÷ '+used.length:'no answers')+' = '+fmt(fit)+'\nIntent = '+intent+'\nScore  = ('+wf.toFixed(1)+' × '+fmt(fit)+') + ('+wi.toFixed(1)+' × '+intent+')\n       = '+fmt(score);
+      var f=$('zt-ls-flag'); f.hidden=!held; if(held) f.textContent='The score clears 70, but intent ('+intent+') is under the minimum of 50, so the grade is held at Medium.';
+      $('zt-ls-note').textContent=skipped?(zero?skipped+' unanswered question'+(skipped>1?'s':'')+' counted as 0, which lowers fit.':skipped+' unanswered question'+(skipped>1?'s':'')+' left out of the fit average.'):(wf===0?'Fit weight is 0%, so fit answers don’t change the score.':'All fit questions answered.');
+    }
+    function load(n){var p=presets[n];$('zt-ls-email').value=p.e;$('zt-ls-title').value=p.t;$('zt-ls-size').value=p.s;$('zt-ls-intent').value=p.i;$('zt-ls-weight').value=p.w;$('zt-ls-zero').checked=p.z;$('zt-ls-guard').checked=p.g;press(n);calc();}
+    for(var k=0;k<btns.length;k++){btns[k].addEventListener('click',function(){load(this.getAttribute('data-preset'));});}
+    ['zt-ls-email','zt-ls-title','zt-ls-size','zt-ls-intent','zt-ls-weight','zt-ls-zero','zt-ls-guard'].forEach(function(id){$(id).addEventListener('input',function(){press('');calc();});});
+    load('dana');
+
+    function decay(){
+      var P=10, r=+$('zt-ls-rate').value/100, n=+$('zt-ls-int').value, d=[];
+      for(var m=0;m<=12;m++) d.push(Math.max(0,P*(1-r*Math.floor(m/n))));
+      $('zt-ls-rout').textContent=Math.round(r*100)+'% of the original points';
+      var W=480,H=216,L=30,R=8,T=10,B=42,pw=W-L-R,ph=H-T-B,bw=pw/13,s='<svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">';
+      [0,5,10].forEach(function(v){var y=T+ph*(1-v/P);s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y+'" y2="'+y+'" stroke="#e4defa"/><text x="'+(L-6)+'" y="'+(y+4)+'" text-anchor="end">'+v+'</text>';});
+      d.forEach(function(v,m){var h=Math.max(2,ph*v/P),x=L+m*bw+bw*.15;s+='<rect x="'+x.toFixed(1)+'" y="'+(T+ph-h).toFixed(1)+'" width="'+(bw*.7).toFixed(1)+'" height="'+h.toFixed(1)+'" rx="2" fill="'+(v?'#6d28d9':'#e4defa')+'"><title>Month '+m+': '+(Math.round(v*10)/10)+' points</title></rect>'; if(m%2===0) s+='<text x="'+(L+m*bw+bw/2).toFixed(1)+'" y="'+(H-24)+'" text-anchor="middle">'+m+'</text>';});
+      s+='<text x="'+(L+pw/2)+'" y="'+(H-4)+'" text-anchor="middle">Months since the activity</text></svg>';
+      $('zt-ls-chart').innerHTML=s;
+      var zeroAt=d.indexOf(0);
+      $('zt-ls-dnote').textContent='A 10-point activity is worth '+(Math.round(d[Math.min(n,12)]*10)/10)+' after '+n+' month'+(n>1?'s':'')+(zeroAt>-1?' and reaches 0 at month '+zeroAt+'.':' and still counts after a year.');
+    }
+    $('zt-ls-rate').addEventListener('input',decay); $('zt-ls-int').addEventListener('input',decay); decay();
+
+    var items=[
+      ['How much does it cost?',0,'A pricing question on its own. Researchers, students and competitors ask this too.'],
+      ['We need this live before our event next month.',1,'Timing: a concrete deadline.'],
+      ['How do you compare with Intercom?',0,'A feature comparison on its own isn’t a purchase signal.'],
+      ['Our bounce rate is too high and demo requests are down.',1,'Need: a specific business problem.'],
+      ['Maybe later this year.',0,'Vague interest. Timing needs a concrete window or deadline.'],
+      ['I approve tools for our team, and we have budget set aside this quarter.',1,'Authority and budget, both stated outright.'],
+      ['I’m the Head of Marketing.',0,'A title counts toward fit, not authority, until they say they approve or influence the purchase.'],
+      ['Can you send the contract so we can get started?',1,'Purchase: they’re ready to move forward.']
+    ], ans={};
+    function quiz(){
+      var ul=$('zt-ls-list'); ul.innerHTML='';
+      items.forEach(function(it,i){
+        var li=document.createElement('li'); li.className='zt-tool__item';
+        var q=document.createElement('q'); q.textContent=it[0]; li.appendChild(q);
+        var row=document.createElement('div'); row.className='zt-tool__row';
+        [['Raises intent',1],['Doesn’t count alone',0]].forEach(function(o){var b=document.createElement('button');b.type='button';b.textContent=o[0];b.setAttribute('aria-pressed',ans[i]===o[1]?'true':'false');b.addEventListener('click',function(){ans[i]=o[1];quiz();});row.appendChild(b);});
+        li.appendChild(row);
+        if(i in ans){var p=document.createElement('p');var ok=ans[i]===it[1];p.className='zt-tool__ans '+(ok?'is-right':'is-wrong');p.textContent=(ok?'Right. ':'Not quite. ')+it[2];li.appendChild(p);}
+        ul.appendChild(li);
+      });
+      var n=Object.keys(ans).length, c=Object.keys(ans).filter(function(i){return ans[i]===items[i][1];}).length;
+      $('zt-ls-tally').textContent=n<items.length?n+' of '+items.length+' answered':c+' of '+items.length+' right';
+    }
+    $('zt-ls-reset').addEventListener('click',function(){ans={};quiz();});
+    quiz();
+  })();
+  </script>
+
+  <script>
+  (function(){
+    var bar=document.querySelector('.zt-crit__filter'); if(!bar) return;
+    bar.hidden=false;
+    var groups=document.querySelectorAll('.zt-crit__group'), btns=bar.querySelectorAll('button');
+    for(var i=0;i<btns.length;i++){btns[i].addEventListener('click',function(){
+      var show=this.getAttribute('data-show');
+      for(var j=0;j<btns.length;j++) btns[j].setAttribute('aria-pressed',btns[j]===this?'true':'false');
+      for(var k=0;k<groups.length;k++) groups[k].hidden=!(show==='all'||groups[k].getAttribute('data-group')===show);
+    });}
+  })();
+  </script>
+</article>
+
+</body>
+</html>
